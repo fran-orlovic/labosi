@@ -17,3 +17,8 @@ def get_kolegij(kolegij, index):
     :return:
     """
     print(f"\t{index}. {kolegij['naziv']}")
+
+
+def ispis_svih_kolegija(kolegiji):
+    for kolegij in kolegiji:
+        ispis_kolegija(kolegij)

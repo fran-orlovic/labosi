@@ -18,3 +18,8 @@ def get_ispit(ispit, index):
     :return:
     """
     print(f"\t{index}. Ispit iz kolegija {ispit['kolegij']['naziv']}")
+
+
+def ispis_svih_ispita(ispiti):
+    for ispit in ispiti:
+        ispis_ispita(ispit)

@@ -1,5 +1,5 @@
 from ispiti import get_ispit
-
+from utilities import unos_intervala
 
 def unos_studenta(ispiti, index):
     """
@@ -17,7 +17,7 @@ def unos_studenta(ispiti, index):
     for i, ispit in enumerate(ispiti, start=1):
         get_ispit(ispit, i)
 
-    odabir_ispita = int(input("Unesite ispit: "))
+    odabir_ispita = unos_intervala(1, i)
     student['ispit'] = ispiti[odabir_ispita - 1]
 
     return student
