@@ -1,3 +1,5 @@
+from .kolegij import Kolegij
+
 
 def unos_kolegija(index):
     """
@@ -6,9 +8,10 @@ def unos_kolegija(index):
     :param index:
     :return kolegij:
     """
-    kolegij = {}
 
-    kolegij['naziv'] = input(f"Unesite naziv {index}. kolegija: ")
-    kolegij['ects'] = int(input(f"Unesite ECTS bodove za {index}.kolegij: "))
+    naziv = input(f"Unesite naziv {index}. kolegija: ")
+    ects = int(input(f"Unesite ECTS bodove za {index}.kolegij: "))
+
+    kolegij = Kolegij(naziv, ects)
 
     return kolegij
