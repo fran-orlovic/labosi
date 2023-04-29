@@ -17,6 +17,6 @@ class Ispit:
         return self.__datum
 
     def ispis(self):
-        print(f"\t\tIspit iz kolegija {self.__kolegij.naziv}, " +
+        print(f"\tIspit iz kolegija {self.__kolegij.naziv}, " +
               f"koji nosi {self.__kolegij.ects} ECTS bodova, " +
               f"koji će se održati {self.__datum}")

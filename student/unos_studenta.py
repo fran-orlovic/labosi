@@ -1,6 +1,7 @@
 from ispiti import get_ispit
 from utilities import unos_intervala
-from .student import Student
+from .redovni_student import RedovniStudent
+from .vanredni_student import VanredniStudent
 
 
 def unos_studenta(ispiti, index):
@@ -21,6 +22,14 @@ def unos_studenta(ispiti, index):
     odabir_ispita = unos_intervala(1, len(ispiti))
     ispit = ispiti[odabir_ispita - 1]
 
-    student = Student(ime, prezime, ispit)
+    print("Odaberite tip studenta: ")
+    print("\t1.Redovni")
+    print("\t2.Vanredni")
+    odabir_tipa = unos_intervala(1, 2)
+    if odabir_tipa == 1:
+        broj_prijava = int(input("Unesite broj prijava na ispit: "))
+        student = RedovniStudent(ime, prezime, ispit, broj_prijava)
+    else:
+        student = VanredniStudent(ime, prezime, ispit)
 
     return student
