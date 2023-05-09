@@ -6,7 +6,6 @@ class VanredniStudent(Student, IzracunSkolarine):
 
     def __init__(self, ime, prezime, ispit):
         Student.__init__(self, ime, prezime, ispit)
-        IzracunSkolarine.__init__(self)
 
     def izracun_skolarine(self):
         return self.ispit.kolegij.ects * 50
